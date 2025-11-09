@@ -1,0 +1,17 @@
+<app-menu [showElements]="true"></app-menu>
+
+<div class="themes-container">
+    <mat-card *ngFor="let theme of themes" class="theme-card">
+      <mat-card-header>
+        <mat-card-title>{{ theme.title}}</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <p>{{ theme.description }}</p>
+      </mat-card-content>
+
+      <button *ngIf="!isUserSubscribed(theme.id)" (click)="subscribe(theme.id)" class="subscribe">S'abonner</button>
+      <button *ngIf="isUserSubscribed(theme.id)" class="dejaAbonne">Déjà abonné</button>
+    </mat-card>
+  </div>
+  

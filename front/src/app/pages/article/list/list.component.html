@@ -1,0 +1,19 @@
+<div class="articles-container">
+  <mat-card *ngFor="let article of articles" class="article-card" (click)="openArticleDetails(article)">
+    <!-- Titre de l'article -->
+    <mat-card-header>
+      <mat-card-title>{{ article.title}}</mat-card-title>
+    </mat-card-header>
+
+    <!--la date et l'auteur -->
+    <div class="article-meta">
+      <span class="article-date">{{ article.created_at | date:'dd/MM/yyyy HH:mm:ss' }}</span>
+      <span class="article-author">{{ article.owner.name }}</span>
+    </div>
+
+    <!-- Description de l'article -->
+    <mat-card-content>
+      <p>{{ article.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

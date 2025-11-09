@@ -1,0 +1,51 @@
+<app-menu [showElements]="false"></app-menu>
+
+<div class="signup-container">   
+    <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <h2>Inscription</h2>
+      
+      <div class="form-group">
+        <label for="name">Nom d'utilisateur</label>
+        <input 
+          type="text" 
+          id="name" 
+          formControlName="name" 
+          placeholder="Entrez votre nom d'utilisateur"
+          required
+        >
+        <div *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="error-message">
+          Le nom d'utilisateur est requis
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+        <input 
+          type="email" 
+          id="email" 
+          formControlName="email" 
+          placeholder="Entrez votre adresse e-mail"
+          required
+        >
+        <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error-message">
+          Veuillez entrer une adresse e-mail valide
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input 
+          type="password" 
+          id="password" 
+          formControlName="password" 
+          placeholder="Entrez votre mot de passe"
+          required
+        >
+        <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="error-message">
+          Le mot de passe est requis (min. 3 caractères)
+        </div>
+      </div>
+      
+      <button type="submit" class="submit-btn" [disabled]="signupForm.invalid">S'inscrire</button>
+    </form>
+  </div>

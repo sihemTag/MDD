@@ -1,0 +1,9 @@
+ <div *ngFor="let comment of comments" class="comment-card">
+    <div class="comment-header">
+      <span class="user-id">{{ comment.user_id.name }}</span>
+      <span class="comment-date">{{ comment.created_at | date: 'short' }}</span>
+    </div>
+    <div class="comment-content">
+      {{ comment.commentaire }}
+    </div>
+  </div> 

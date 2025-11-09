@@ -1,0 +1,61 @@
+.createArticle{
+    border-radius: 8px;
+    background-color: rgb(134, 30, 214);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.filter {
+    background: none; 
+    border: none;   
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 40px;
+   
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

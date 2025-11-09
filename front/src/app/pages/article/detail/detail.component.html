@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>{{ article.title }}</h2>
+
+<mat-dialog-content>
+
+  <div class="article-meta">
+    <span class="article-date">{{ article.created_at | date:'dd/MM/yyyy HH:mm:ss' }}</span>
+    <span class="article-author">{{ article.owner.name }}</span>
+  </div>
+
+  <p class="article-description">{{ article.description }}</p>
+
+  <mat-divider></mat-divider>
+
+  <div class="comments-section">
+    <h3>Commentaires</h3>
+    <app-comment [articleId]="article.id"></app-comment>
+  </div>
+
+  <div class="comment-form">
+    <textarea [(ngModel)]="comment" placeholder="Ajoutez un commentaire..."></textarea>
+    <button mat-icon-button (click)="sendComment(comment,article.id,article.owner.id)">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fermer</button>
+</mat-dialog-actions>

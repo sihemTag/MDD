@@ -1,0 +1,67 @@
+.form-container {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-top: 10px;
+    margin: 10px auto 0; 
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .error {
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button.cancel {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+ 

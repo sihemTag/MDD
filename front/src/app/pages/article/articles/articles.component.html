@@ -1,0 +1,15 @@
+<app-menu [showElements]="true"></app-menu>
+
+<div class="container">
+    <button class="createArticle"  (click) = "openArticleForm()">Créer un article</button>
+    <!-- POPIN -->
+    <div class="modal-overlay" *ngIf="showArticleForm">
+        <div class="modal-content">
+            <app-article-form (closeForm)="closeArticleForm()"></app-article-form>
+        </div>
+    </div>
+  
+    <button class="filter" (click)="toggleSort()">Trier par 
+        <i class="fa-solid" [ngClass]="sortAscending ? 'fa-arrow-down' : 'fa-arrow-up'"></i> </button>
+</div>
+<app-list #list [sortAscending]="sortAscending"></app-list>

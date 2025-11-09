@@ -1,0 +1,56 @@
+.themes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 20px;
+  margin: 30px;
+}
+
+.theme-card {
+  background-color: rgb(226, 226, 226);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+mat-card-content {
+  padding: 15px;
+  font-size: 16px;
+}
+
+mat-card-actions {
+  text-align: center;
+}
+
+.subscribe{
+  background-color: rgb(134, 30, 214);
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+}
+
+.subscribe:hover {
+  background-color: rgb(102, 23, 157);
+  transform: scale(1.05);
+}
+
+.dejaAbonne{
+  background-color: grey;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  margin: 1rem auto 0 auto;
+
+}
