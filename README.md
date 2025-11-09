@@ -8,7 +8,7 @@ Ce projet est une applciation web conçue avec Java/Springboot et Angular, qui v
   - Spring Boot 3.4.2
 
 ## Préparation de la base de données
-Lancer le script pour créer les tables en base de données (le script se trouve dans le dossier \front\ressources\script.sql)
+Lancer le script pour créer les tables en base de données (le script se trouve dans le dossier \front\ressources\script.sql)  
 Modifier les informations d'authentification à la bdd dans le `application.properties`
 - username
 - password
